@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Created by James on 4/9/2015.
  */
-@Path("/skeleton")
+@Path("/")
 @Produces(MediaType.TEXT_HTML)
 public class SkeletonResource {
 
