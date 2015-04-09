@@ -1,4 +1,4 @@
-package com.jameskohli;
+package com.jameskohli.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

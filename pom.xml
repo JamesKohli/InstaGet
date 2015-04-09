@@ -27,9 +27,30 @@
       <artifactId>dropwizard-core</artifactId>
       <version>${dropwizard.version}</version>
     </dependency>
+    <dependency>
+      <groupId>io.dropwizard</groupId>
+      <artifactId>dropwizard-views</artifactId>
+      <version>${dropwizard.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.dropwizard</groupId>
+      <artifactId>dropwizard-assets</artifactId>
+      <version>${dropwizard.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.dropwizard</groupId>
+      <artifactId>dropwizard-views-freemarker</artifactId>
+      <version>${dropwizard.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+    <directory>src/main/resources</directory>
+  </resource>
+  </resources>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

@@ -1,4 +1,4 @@
-package com.jameskohli;
+package com.jameskohli.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;
