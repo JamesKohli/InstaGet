@@ -2,7 +2,7 @@ package com.jameskohli;
 
 import com.google.common.collect.ImmutableMap;
 import com.jameskohli.health.TemplateHealthCheck;
-import com.jameskohli.resources.SkeletonResource;
+import com.jameskohli.resources.HomeViewResource;
 import com.jameskohli.resources.UrlParserResource;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -41,7 +41,7 @@ public class App extends Application<InstaGetConfiguration>
     @Override
     public void run(InstaGetConfiguration configuration, Environment environment) {
       final TemplateHealthCheck templateHealthCheck = new TemplateHealthCheck(configuration.getTemplate());
-      environment.jersey().register(new SkeletonResource());
+      environment.jersey().register(new HomeViewResource());
       environment.jersey().register(new UrlParserResource(configuration.getDefaultImage()));
     }
 }

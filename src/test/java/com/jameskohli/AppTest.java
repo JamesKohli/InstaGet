@@ -1,5 +1,6 @@
 package com.jameskohli;
 
+import com.jameskohli.core.ShareUrlParser;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -29,10 +30,31 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Test regex of instagram urls
      */
-    public void testApp()
+    public void testShareUrlParserTrue()
     {
-        assertTrue( true );
+        ShareUrlParser sup = new ShareUrlParser("https://instagram.com/p/sykBgGSGAF/");
+        ShareUrlParser sup2 = new ShareUrlParser("http://instagram.com/p/sykBgGSGAF");
+        assertTrue(sup.getIsValidUrl());
+        assertTrue(sup2.getIsValidUrl());
+
+    }
+
+    public void testShareUrlParserFalse()
+    {
+        ShareUrlParser sup = new ShareUrlParser("https://facebook.com/p/sykBgGSGAF/");
+        ShareUrlParser sup2 = new ShareUrlParser("htps://instagram.com/p/sykBgGSGAF/");
+        ShareUrlParser sup3 = new ShareUrlParser("instagram.com/p/sykBgGSGAF/");
+        ShareUrlParser sup4 = new ShareUrlParser("https://instagram.com/p/asefasgea");
+        assertFalse(sup.getIsValidUrl());
+        assertFalse(sup2.getIsValidUrl());
+        assertFalse(sup3.getIsValidUrl());
+        assertFalse(sup4.getIsValidUrl());
+    }
+
+    public void testExtractImage() {
+        ShareUrlParser sup = new ShareUrlParser("https://instagram.com/p/sykBgGSGAF/");
+        assertEquals("https://scontent-atl.cdninstagram.com/hphotos-xaf1/t51.2885-15/10665544_334845526689377_1839313114_n.jpg", sup.getImageUrl());
     }
 }

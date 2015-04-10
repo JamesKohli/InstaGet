@@ -42,6 +42,12 @@
       <artifactId>dropwizard-views-freemarker</artifactId>
       <version>${dropwizard.version}</version>
     </dependency>
+    <dependency>
+        <!-- jsoup HTML parser library @ http://jsoup.org/ -->
+        <groupId>org.jsoup</groupId>
+        <artifactId>jsoup</artifactId>
+        <version>1.7.3</version>
+    </dependency>
   </dependencies>
 
   <build>

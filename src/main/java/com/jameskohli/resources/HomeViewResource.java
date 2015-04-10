@@ -1,6 +1,6 @@
 package com.jameskohli.resources;
 
-import com.jameskohli.views.SkeletonView;
+import com.jameskohli.views.HomeView;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,10 +12,10 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("/")
 @Produces(MediaType.TEXT_HTML)
-public class SkeletonResource {
+public class HomeViewResource {
 
   @GET
-  public SkeletonView getSkeleton() {
-    return new SkeletonView();
+  public HomeView getSkeleton() {
+    return new HomeView();
   }
 }
