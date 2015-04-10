@@ -36,6 +36,7 @@ public class ShareUrlParser {
                 String title = doc.title();
                 if (!title.equals("Page Not Found • Instagram")) {
                     isValidUrl = true;
+                    logger.trace("Valid instagram pic found at " + shareUrl);
                     Elements elements = doc.getElementsByAttributeValue("property", "og:image");
                     Element image = elements.first();
                     imageUrl = image.attr("content");

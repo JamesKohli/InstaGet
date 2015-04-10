@@ -8,15 +8,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstaResult {
 
     private String url;
+    private boolean isValid;
 
     public InstaResult() {}
 
-    public InstaResult(String url) {
+    public InstaResult(String url, boolean isValid) {
         this.url = url;
+        this.isValid = isValid;
     }
 
     @JsonProperty
     public String getUrl(){
         return url;
+    }
+
+    @JsonProperty
+    public boolean getIsValid() {
+        return isValid;
     }
 }
