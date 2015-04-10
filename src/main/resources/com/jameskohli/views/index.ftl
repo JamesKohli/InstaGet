@@ -42,7 +42,7 @@
         </div>
     </div>
 	<div class="row">
-		<img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11098457_1618163668404761_1052699132_n.jpg">
+		<img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11098457_1618163668404761_1052699132_n.jpg" style="max-width:100%">
 	</div>
 </div>
 
