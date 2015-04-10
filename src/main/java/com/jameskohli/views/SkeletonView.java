@@ -8,6 +8,6 @@ import io.dropwizard.views.View;
 public class SkeletonView extends View {
 
   public SkeletonView() {
-    super("skeleton.ftl");
+    super("index.ftl");
   }
 }
