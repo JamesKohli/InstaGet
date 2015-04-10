@@ -26,6 +26,15 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // This is more like it!
+      });
+    </script>
+
 </head>
 <body>
 
@@ -38,11 +47,11 @@
             <p>Instaget will pull photos from Instagram and display them so you can download them directly. Just paste the Instagram share link here!</p>
 			<label for="exampleMessage">Share URL</label>
 			<textarea class="u-full-width" placeholder="https://instagram.com/p/sykBgGSGAF/" id="shareUrl"></textarea>
-			<input class="button-primary" type="submit" value="Submit">
+			<input class="button-primary" type="submit" value="Submit" id="submitButton">
         </div>
     </div>
 	<div class="row">
-		<img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11098457_1618163668404761_1052699132_n.jpg" style="max-width:100%">
+		<img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11098457_1618163668404761_1052699132_n.jpg" class="u-max-full-width" id="instaimage">
 	</div>
 </div>
 

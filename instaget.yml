@@ -1,5 +1,6 @@
 template: Hello, %s!
 defaultName: Stranger
+defaultImage: https://scontent-atl.cdninstagram.com/hphotos-xaf1/t51.2885-15/10665544_334845526689377_1839313114_n.jpg
 
 # the key needs to match the suffix of the renderer
 viewRendererConfiguration:

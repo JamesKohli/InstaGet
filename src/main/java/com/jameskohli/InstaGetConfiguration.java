@@ -20,6 +20,9 @@ public class InstaGetConfiguration extends Configuration {
   @NotEmpty
   private String defaultName = "User";
 
+  @NotEmpty
+  private String defaultImage;
+
   @NotNull
   private ImmutableMap<String, ImmutableMap<String, String>> viewRendererConfiguration = ImmutableMap.of();
 
@@ -41,6 +44,16 @@ public class InstaGetConfiguration extends Configuration {
   @JsonProperty
   public void setDefaultName(String defaultName) {
     this.defaultName = defaultName;
+  }
+
+    @JsonProperty
+  public String getDefaultImage() {
+      return defaultImage;
+  }
+
+  @JsonProperty
+  public void setDefaultImage(String defaultImage) {
+      this.defaultImage = defaultImage;
   }
 
   @JsonProperty("viewRendererConfiguration")
