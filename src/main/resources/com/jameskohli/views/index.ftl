@@ -34,7 +34,13 @@
         $( "#submitButton" ).click(function() {
           $( "#thinking" ).text("Thinking...");
           jQuery.get("gram", {shareUrl : $("#shareUrl").val() }, function( data ) {
-            $( "#instaimage" ).attr( "src", data.url );
+            if (data.isValid) {
+              $( "#instaimage" ).attr( "src", data.url );
+              $( "#errorMessage").text("");
+            } else {
+              $( "#instaimage" ).removeAttr( "src" );
+              $( "#errorMessage").text("Couldn't find an image! Your link might be invalid, or it could be from a private profile, which I unfortunately don't support yet.");
+            }
             $( "#thinking" ).text("Thinking... Done!");
           }, "json" );
         });
@@ -65,7 +71,12 @@
         </div>
 	</div>
 	<img class="u-max-full-width" id="instaimage">
-
+	<div class="row">
+        <div class="one-half column" style="margin-top: 5%">
+            <h6 id="errorMessage"></h6>
+            <p>If something seems to be working incorrectly, please log it <a href="https://github.com/JamesKohli/Instaget/issues">here!</a> Or just email me at james@jameskohl.com</p>
+        </div>
+    </div>
 </div>
 
 <!-- End Document
