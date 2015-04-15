@@ -1,7 +1,8 @@
 package com.jameskohli;
 
 import com.google.common.collect.ImmutableMap;
-import com.jameskohli.health.TemplateHealthCheck;
+import com.jameskohli.health.InstagetHealthCheck;
+import com.jameskohli.health.InstagramHealthCheck;
 import com.jameskohli.resources.HomeViewResource;
 import com.jameskohli.resources.UrlParserResource;
 import io.dropwizard.Application;
@@ -40,7 +41,8 @@ public class App extends Application<InstaGetConfiguration>
 
     @Override
     public void run(InstaGetConfiguration configuration, Environment environment) {
-      final TemplateHealthCheck templateHealthCheck = new TemplateHealthCheck(configuration.getTemplate());
+      environment.healthChecks().register("Instaget", new InstagetHealthCheck());
+      environment.healthChecks().register("Instagram", new InstagramHealthCheck());
       environment.jersey().register(new HomeViewResource());
       environment.jersey().register(new UrlParserResource(configuration.getDefaultImage()));
     }
